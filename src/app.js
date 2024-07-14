@@ -11,7 +11,7 @@ const cookieSecret = process.env.COOKIE_SECRET;
 //middlewares
 app.use(
   cors({
-    origin: `http://localhost:5137`,
+    origin: `https://stargpt1.vercel.app`,
     credentials: true,
   })
 );
