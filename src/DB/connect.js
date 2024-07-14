@@ -1,6 +1,6 @@
 import { connect, disconnect } from "mongoose";
 
-let MONGODB_URL = import.meta.env.MONGODB_URL;
+let MONGODB_URL = process.env.MONGODB_URL;
 
 async function connectDB() {
   try {

@@ -1,6 +1,5 @@
-import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
-const jwtSecret = import.meta.env.JWT_SECRET;
+const jwtSecret = process.env.JWT_SECRET;
 
 export const createToken = (id, email, expiresIn) => {
   const payload = { id, email };

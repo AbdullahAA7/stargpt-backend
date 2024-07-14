@@ -1,6 +1,5 @@
 import { compare, hash } from "bcrypt";
 import User from "../models/userModel.js";
-import { Request, Response, NextFunction } from "express";
 import { createToken } from "../utilities/token.js";
 import toast from "react-hot-toast";
 

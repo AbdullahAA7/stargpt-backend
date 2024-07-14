@@ -2,11 +2,10 @@ import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
-  Content,
 } from "@google/generative-ai";
-import { NextFunction, Request, Response } from "express";
+
 import User from "../models/userModel.js";
-const apiKey = import.meta.env.GEMINI_API;
+const apiKey = process.env.GEMINI_API;
 export const modelName = "gemini-pro";
 
 export const genChats = async (req, res, next) => {

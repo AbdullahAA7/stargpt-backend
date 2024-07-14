@@ -4,7 +4,7 @@ import app from "./app.js";
 import { connectDB } from "./DB/connect.js";
 
 //Variables
-const PORT = import.meta.env.PORT || 8000;
+const PORT = process.env.PORT || 8000;
 //Connection & listenners
 app.listen(PORT, () => {
   console.log(`App is litening on ${PORT}`);

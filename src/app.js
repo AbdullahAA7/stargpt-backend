@@ -7,11 +7,11 @@ import dotenv from "dotenv";
 dotenv.config();
 //Variables
 const app = express();
-const cookieSecret = import.meta.env.COOKIE_SECRET;
+const cookieSecret = process.env.COOKIE_SECRET;
 //middlewares
 app.use(
   cors({
-    origin: `https://stargpt.vercel.app`,
+    origin: `http://localhost:5137`,
     credentials: true,
   })
 );
