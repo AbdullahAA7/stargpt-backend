@@ -4,6 +4,7 @@ import starRouter from "./routes/starRouter.js";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import dotenv from "dotenv";
+import bodyParser from "body-parser";
 dotenv.config();
 //Variables
 const app = express();
@@ -16,6 +17,7 @@ app.use(
   })
 );
 app.use(express.json());
+app.use(bodyParser.json());
 app.use(cookieParser(cookieSecret));
 app.use("/star", starRouter); // Domain/star => starRouter.js
 //we will remove this at the time of deployment
