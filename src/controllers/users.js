@@ -31,8 +31,6 @@ export const userSignup = async (req, res, next) => {
       domain: "stargpt-backend.vercel.app",
       httpOnly: true,
       signed: true,
-      secure: true,
-      sameSite: "None",
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
@@ -44,8 +42,6 @@ export const userSignup = async (req, res, next) => {
       expires,
       httpOnly: true,
       signed: true,
-      secure: true,
-      sameSite: "None",
     });
     return res.status(201).json({
       message: "Signup successful",
@@ -76,8 +72,6 @@ export const userLogin = async (req, res, next) => {
       domain: "stargpt-backend.vercel.app",
       httpOnly: true,
       signed: true,
-      secure: true,
-      sameSite: "None",
     });
 
     const token = createToken(user._id.toString(), user.email, "7d");
@@ -89,8 +83,6 @@ export const userLogin = async (req, res, next) => {
       expires,
       httpOnly: true,
       signed: true,
-      secure: true,
-      sameSite: "None",
     });
 
     return res.status(200).json({
@@ -140,8 +132,6 @@ export const logoutUser = async (req, res, next) => {
       domain: "stargpt-backend.vercel.app",
       httpOnly: true,
       signed: true,
-      secure: true,
-      sameSite: "None",
     });
 
     return res.status(200).json({
