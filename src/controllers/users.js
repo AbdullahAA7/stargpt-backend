@@ -137,7 +137,7 @@ export const logoutUser = async (req, res, next) => {
 
     res.clearCookie("Cookie_Token", {
       path: "/",
-      // domain: ".stargpt1.vercel.app",
+      domain: "stargpt-backend.vercel.app",
       httpOnly: true,
       signed: true,
       secure: true,
