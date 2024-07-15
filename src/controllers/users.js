@@ -28,7 +28,7 @@ export const userSignup = async (req, res, next) => {
     // creating token and storing cookies for user
     res.clearCookie("Cookie_Token", {
       path: "/",
-      domain: "stargpt1.vercel.app",
+      domain: ".stargpt1.vercel.app",
       httpOnly: true,
       signed: true,
       secure: true,
@@ -40,7 +40,7 @@ export const userSignup = async (req, res, next) => {
     expires.setDate(expires.getDate() + 7);
     res.cookie("Cookie_Token", token, {
       path: "/",
-      domain: "stargpt1.vercel.app",
+      domain: ".stargpt1.vercel.app",
       expires,
       httpOnly: true,
       signed: true,
@@ -73,7 +73,7 @@ export const userLogin = async (req, res, next) => {
     // //creating token and storing cookies for user
     res.clearCookie("Cookie_Token", {
       path: "/",
-      domain: "stargpt1.vercel.app",
+      domain: ".stargpt1.vercel.app",
       httpOnly: true,
       signed: true,
       secure: true,
@@ -85,7 +85,7 @@ export const userLogin = async (req, res, next) => {
     expires.setDate(expires.getDate() + 7);
     res.cookie("Cookie_Token", token, {
       path: "/",
-      domain: "stargpt1.vercel.app",
+      domain: ".stargpt1.vercel.app",
       expires,
       httpOnly: true,
       signed: true,
@@ -137,7 +137,7 @@ export const logoutUser = async (req, res, next) => {
 
     res.clearCookie("Cookie_Token", {
       path: "/",
-      domain: "stargpt1.vercel.app",
+      domain: ".stargpt1.vercel.app",
       httpOnly: true,
       signed: true,
       secure: true,
