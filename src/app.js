@@ -9,10 +9,10 @@ dotenv.config();
 //Variables
 const app = express();
 const cookieSecret = process.env.COOKIE_SECRET;
-//middlewares// origin: `https://stargpt1.vercel.app`,
+//middlewares
 app.use(
   cors({
-    origin: `http://localhost:5173`,
+    origin: `https://stargpt1.vercel.app`,
     credentials: true,
   })
 );
