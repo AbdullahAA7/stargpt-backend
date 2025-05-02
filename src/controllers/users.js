@@ -104,7 +104,7 @@ export const userLogin = async (req, res, next) => {
   }
 };
 
-export const verifyUser = async (req, res, next) => {
+export const verifyUser = async (req, res) => {
   try {
     const user = await User.findById(res.locals.jwtData.id);
     if (!user) {
