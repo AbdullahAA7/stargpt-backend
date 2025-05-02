@@ -5,11 +5,9 @@ import { connectDB } from "./DB/connect.js";
 
 //Variables
 const PORT = process.env.PORT || 8000;
-//Connection & listenners
-app.listen(PORT, () => {
-  console.log(`App is litening on ${PORT}`);
-});
 
 connectDB().then(() => {
   console.log("Connected to database ");
 });
+
+export default app;
